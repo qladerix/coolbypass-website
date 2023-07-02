@@ -1,0 +1,239 @@
+/* main */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    
+}
+
+
+
+#particles-js
+{
+    height: 1920x;
+    width: 100%;
+    background-image: url(https://cdn.discordapp.com/attachments/701730226681675847/1123958275789045932/s.png);
+}
+
+
+.flacksecurity
+
+{
+letter-spacing: 0.04vw;
+padding-left: -1vw;
+padding-right: 0.3vw;
+color: #ffffff;
+font-family: monospace;
+text-decoration: dashed;
+}
+
+
+.title{
+    color: #fbfcfd;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.title small{
+    font-family: Sansita;
+    font-weight: bold;
+    font-size: 14.5px;
+    letter-spacing: 2px;
+}
+
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+}
+
+.glow-on-hover {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #8bdeff , #8bdeff , #8bdeff, #8bdeff , #8bdeff  , #8bdeff  , #fbfcfd);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.popup_container{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.popup_container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup{
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.popup button:hover{
+    background-color: rgba(0, 0, 0, 4);
+}
+
+.popup h1{
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.popup p{
+    opacity: 0.7;
+    font-size: 15px;
+}
+.footer {
+    bottom: 0;
+    font-family: monospace;
+    opacity: 1.9;
+    padding: 1px calc(2px / 2);
+    position: absolute;
+    right: 0;
+    color: #ffffff;
+    left: 0px;
+    text-align: center;
+    height: 20px;
+}
+
+p {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 0px;
+  }
+  
+  .action-btns {
+    opacity: 0.3;
+     gap: -1rem;
+  }
+  
+  .btn {
+    font-size: 0.8rem;
+    text-align: left;
+    letter-spacing: 0.10vw;
+    color: #000000;
+    
+  }
+  
+  .play {
+
+  }
+  
+  .play:hover{
+
+  }
+  
+  .pause {
+
+  }
+  
+  .pause:hover{
+
+  }
+
+#clock
+{
+    bottom: 0;
+    font-family: monospace;
+    left: 10px;
+    position: fixed;
+    opacity: 1.9;
+    right: 0;
+    color: #ffffff;
+    text-align: center;
+    height: 14px;
+    font-size: 15px;
+}
+
